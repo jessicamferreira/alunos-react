@@ -1,15 +1,26 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, TextField, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
+import Produtos from './types/produtos';
 
 export const Produtos: React.FC = () =>{
+
+  const [listaDeProdutos, setListaDeProdutos] = useState<Produtos>([])
+
+  const [codigoProduto, setCodigoProduto] = useState<string>("");
+  const [nomeProduto, setNomeProduto] = useState<string>("");
+  const [descricoProduto, setDescricaoProduto] = useState<string>("");
+  const [nomeMarcaProduto, setMarcaProduto] = useState<string>("");
+  const [nomeDepartamentoProduto, setDepartamentoProduto] = useState<string>("");
+  const [nomePrecoProduto, setPrecoProduto] = useState<string>("");
+
   return(
     <React.Fragment>
     <Typography variant='h3'>Produtos {}</Typography>
     <Button  variant='outlined'>Cadastrar</Button>
     <Button  variant='outlined'>Disparar</Button>
     <Button  variant='outlined'>Limpar</Button>
-{/* 
-    {.map(item => {
+ 
+    {map(item => {
       return (
         <div key={item.matricula} className="mt-5">
           <Typography>Nome: {item.nome}</Typography>
@@ -17,8 +28,8 @@ export const Produtos: React.FC = () =>{
           <Typography>Matricula: {item.matricula}</Typography>
         </div>
       )
-    })} */}
-    {/* <div>
+    })}
+     <div>
 
     <Dialog
       open={open}
@@ -52,7 +63,7 @@ export const Produtos: React.FC = () =>{
         </Button>
       </DialogActions>
     </Dialog>
-  </div> */}
+  </div>
   </React.Fragment>
   
 
