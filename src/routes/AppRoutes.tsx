@@ -6,7 +6,7 @@ import Home from '../pages/home/Home';
 import Faqs from '../pages/faqs/Faqs';
 import Books from '../pages/books/Books';
 import Alunos from '../pages/alunos/Alunos';
-import { Produtos } from '../pages/produtos/Produtos';
+import { Products } from '../pages/produtos/Produtos';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/faqs" element={<LayoutDefault component={Faqs} />} />
         <Route path="/books" element={<LayoutDefault component={Books} />} />
         <Route path="/alunos" element={<LayoutDefault component={Alunos} />} />
-        <Route path="/produtos" element={<LayoutDefault component={Produtos} />} />
+        <Route path="/produtos" element={<LayoutDefault component={Products} />} />
       </Routes>
     </BrowserRouter>
   );
