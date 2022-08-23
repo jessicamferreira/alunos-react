@@ -21,8 +21,10 @@ const carroSlice = createSlice({
     addCarro: adapter.addOne,
     addManyCarros: adapter.addMany,
     deleteAll: adapter.removeAll,
+    deletarUmCarro: adapter.removeOne,
+    atualizarCarro: adapter.updateOne
   },
 });
 
-export const { addCarro, addManyCarros, deleteAll } = carroSlice.actions;
+export const { addCarro, addManyCarros, deleteAll, deletarUmCarro, atualizarCarro } = carroSlice.actions;
 export default carroSlice.reducer;

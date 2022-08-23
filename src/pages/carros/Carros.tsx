@@ -2,7 +2,7 @@ import { Button, Grid, Typography } from "@mui/material";
 
 import { useAppDispatch } from '../../store/hooks';
 
-import { addCarro, addManyCarros, deleteAll } from '../../store/modules/carros/carrosSlice';
+import { addCarro, addManyCarros, deletarUmCarro, deleteAll, atualizarCarro } from '../../store/modules/carros/carrosSlice';
 
 
 
@@ -27,6 +27,13 @@ export const Carros = () => {
     console.log(carros)
   }
 
+  const removerUmCarroSo = () => {
+    dispatch(deletarUmCarro("K"))
+  }
+
+  const atualizarUmCarro = () => {
+    dispatch(atualizarCarro({ id: "K", changes: { cor: "vermelho", marca: "Chevrolet"}}))
+  }
   return(
 
     <Grid container spacing={2}>
@@ -39,6 +46,9 @@ export const Carros = () => {
         <Button variant='outlined' onClick={addCarro1}>Adicionar</Button>
         <Button variant='outlined' onClick={addManyCarros12}>Adicionar vários</Button>
         <Button variant='outlined' onClick={removeMany}>Excluir todos</Button>
+        <Button variant='outlined' onClick={removerUmCarroSo}>Excluir um carro</Button>
+        <Button variant='outlined' onClick={atualizarUmCarro}>Atualizar um carro</Button>
+
       </Grid>
     </Grid>
 
