@@ -15,11 +15,11 @@ export const Carros = () => {
   }
 
   const addManyCarros12 = () => {
-    const carros = addManyCarros([
+    dispatch(addManyCarros([
       { marca: "Ford", cor: "Vermelho", modelo: "Fiesta" },
       { marca: "Chevrolet", cor: "Branco", modelo: "Onix" },
       { marca: "Ford", cor: "Verde", modelo: "K" },
-    ])
+    ]))
   }
 
   const removeMany = () => {
